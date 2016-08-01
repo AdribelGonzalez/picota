@@ -22,12 +22,12 @@ Meteor.publish('empleos.single', function (empleoId) {
 });
 
 Meteor.publish('empleos.cat', function (cat) {
-  check(cat, String);
   const selector = {};
   const options = {
-    fields: {id: 1, posicion: 1, tipo: 1, categoria: cat, compania: 1, createdAt: 1},
+    fields: {id: 1, posicion: 1, tipo: 1, categoria: 1, compania: 1, createdAt: 1},
     sort: {createdAt: -1}
   };
+  check(options, Object);
   return Empleos.find(selector, options);
 });
 

@@ -1,12 +1,11 @@
 
 import React from 'react';
 
-const Categoria = ({cat}) => (
+const Categoria = ({empleos}) => (
 
 
        <div className="container">
 <div className="row ">
-<h1>{cat}</h1>
   <ul>
       {empleos.map(({_id, posicion, compania, tipo, categoria}) => (
         <li className="empleo" key={_id}>

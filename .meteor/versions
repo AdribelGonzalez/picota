@@ -1,3 +1,8 @@
+accounts-base@1.2.9
+accounts-password@1.2.12
+accounts-ui@1.1.9
+accounts-ui-unstyled@1.1.12
+alanning:roles@1.2.15
 allow-deny@1.0.5
 autoupdate@1.2.11
 babel-compiler@6.9.0
@@ -15,12 +20,14 @@ check@1.2.3
 ddp@1.2.5
 ddp-client@1.2.9
 ddp-common@1.2.6
+ddp-rate-limiter@1.0.5
 ddp-server@1.2.10
 deps@1.0.12
 diff-sequence@1.0.6
 ecmascript@0.5.7
 ecmascript-runtime@0.3.12
 ejson@1.0.12
+email@1.1.16
 es5-shim@4.6.13
 fastclick@1.0.12
 fortawesome:fontawesome@4.5.0
@@ -39,6 +46,7 @@ kurounin:pagination@1.0.9
 launch-screen@1.0.12
 less@2.7.4
 livedata@1.0.18
+localstorage@1.0.11
 logging@1.1.14
 matb33:collection-hooks@0.8.3
 meteor@1.2.16
@@ -54,6 +62,7 @@ momentjs:moment@2.14.4
 mongo@1.1.10
 mongo-id@1.0.5
 mrt:nprogress@0.1.0
+npm-bcrypt@0.8.7
 npm-mongo@1.5.45
 observe-sequence@1.0.12
 okgrow:analytics@2.0.0
@@ -61,6 +70,7 @@ ongoworks:speakingurl@9.0.0
 ordered-dict@1.0.8
 promise@0.8.3
 random@1.0.10
+rate-limit@1.0.5
 react@15.0.1
 react-meteor-data@0.2.9
 react-runtime@15.0.1
@@ -69,12 +79,15 @@ reactive-var@1.0.10
 reload@1.1.10
 retry@1.0.8
 routepolicy@1.0.11
+service-configuration@1.0.10
 session@1.1.6
 settinghead:auto-nprogress@1.0.0
+sha@1.0.8
 skeleton:skeleton@2.0.4
 spacebars@1.0.12
 spacebars-compiler@1.0.12
 spiderable@1.0.13
+srp@1.0.9
 standard-minifier-css@1.1.8
 standard-minifier-js@1.1.8
 templating@1.1.14

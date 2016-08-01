@@ -1,7 +1,6 @@
-import Login from '../components/login/index.jsx';
+import NuevoUsuario from '../components/nuevoUsuario/index.jsx';
 import {useDeps} from 'react-simple-di';
 import {composeWithTracker, composeAll} from 'react-komposer';
-
 
 export const composer = ({context, clearErrors}, onData) => {
   const {LocalState} = context();
@@ -21,4 +20,4 @@ export const depsMapper = (context, actions) => ({
 export default composeAll(
   composeWithTracker(composer),
   useDeps(depsMapper)
-)(Login);
+)(NuevoUsuario);

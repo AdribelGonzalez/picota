@@ -1,14 +1,34 @@
+
+
 import React from 'react';
 
-const Navigation = () => (
-  <div className="nav">
+
+class Navigation extends React.Component {
+  setDiseno() {
+    Session.set('cat', 'diseno')
+  }
+  setSoporte (){
+      Session.set('cat', 'soporte')
+  }
+  setProgramacion() {
+    Session.set('cat', 'programacion')
+  }
+
+  render() {
+   
+    return (
+         <div className="nav">
       <ul>
-        <li class="home"><Link to="/" activeClassName="active">Inicio</Link></li>
-        <li class="tutorials"><Link to="/categoria/diseno" activeClassName="active">Diseño</Link></li>
-        <li class="about"><Link to="/categoria/programacion" activeClassName="active">Programacion</Link></li>
-        <li class="news"><Link to="/categoria/soporte" activeClassName="active">Soporte</Link></li>
+        <li><a  href="/" >Inicio</a></li>
+        <li><a onClick={this.setDiseno} href="/categoria" >Diseño</a></li>
+        <li><a onClick={this.setProgramacion} href="/categoria" >Programacion</a></li>
+        <li><a onClick={this.setSoporte} href="/categoria" >Soporte</a></li>
       </ul>
     </div>
-);
+      
+    );
+  }
+}
+
 
 export default Navigation;

@@ -41,3 +41,6 @@ ejson
 spacebars
 react-meteor-data
 kurounin:pagination
+accounts-password
+alanning:roles
+accounts-ui

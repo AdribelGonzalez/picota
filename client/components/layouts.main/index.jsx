@@ -1,4 +1,5 @@
 import Navigation from '../navigation/index.jsx';
+import Botones from '../loginBotones/index.jsx';
 import React from 'react';
 
 const Layout = ({content = () => null }) => (
@@ -13,22 +14,15 @@ const Layout = ({content = () => null }) => (
                 </h1>
                 <p>Encuentra tu trabajo ideal</p>
                 <a className="button agregar-empleo" href="/nuevo-empleo">Agregar empleo</a>
-                <a className="button ver-empleos" href="/">Registrarte/Loggearte</a>
+              
+                <Botones />
               </div>
             </div>
           </div>
           
         </div>
       </header>
-<div className="nav">
-      <ul>
-        <li ><a href="/" >Inicio</a></li>   
-        <li ><a href="/categoria/diseno" id="diseno" >Diseño</a></li>
-        <li ><a href="/categoria/programacion" id="programacion">Programacion</a></li>
-        <li ><a href="/categoria/soporte" id="soporte" >Soporte</a></li>
-       
-      </ul>
-    </div>
+<Navigation />
     <div>
     {content()}
     </div>
