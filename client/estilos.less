@@ -1,0 +1,207 @@
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+header.main-header {
+  padding: 20px;
+  color: #FFFFFF;
+  background: #1ABC9C;
+  margin-bottom: 0px;
+
+  h1 {
+    font-weight: bold;
+    a {
+      color: #FFFFFF;
+      text-decoration: none;
+      &:hover {
+        color: darken(#FFFFFF, 5%);
+      }
+    }
+  }
+
+  a.button {
+    color: #FFFFFF;
+    &:focus {
+      color: inherit;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  a.agregar-empleo {
+    background: #E74C3C;
+    border: darken(#E74C3C, 20%);
+    margin-right: 10px;
+    &:hover {
+      background: darken(#E74C3C, 10%);
+      color: inherit;
+    }
+  }
+
+  a.ver-empleos {
+    background: #3498DB;
+    border: darken(#3498DB, 20%);
+    margin-left: 10px;
+    &:hover {
+      background: darken(#3498DB, 10%);
+      color: inherit;
+    }
+  }
+}
+
+form.agregar-empleo {
+  textarea {
+    height: 200px;
+  }
+}
+
+a.titulo {
+      color: #F1C40F !important;
+      text-decoration: none;
+      font-weight: bold;
+      &:hover {
+        text-decoration: underline;
+      }
+      &:visited {
+        color: #7F8C8D;
+      }
+    }
+.empleo {
+  border: 1px solid #DDDDDD;
+  padding: 20px;
+  margin-bottom: 20px;
+  .titulo {
+    margin-bottom: 10px;
+    font-size: 19px;
+    
+  }
+  .created-at, .compania {
+    display: inline-block;
+    margin-right: 25px;
+  }
+}
+i {
+  margin-right: 5px;
+}
+li {
+  list-style: none;
+}
+.tituloP {
+  background: #eee;
+  padding: 30px;
+  margin-top: -30px;
+  margin-bottom: 40px;
+  h5{
+    text-transform: uppercase;
+    font-size: 100%;
+    letter-spacing: 3px;
+    color: darkslategray;
+    font-weight: bold;
+  }
+}
+.nav {
+  margin-bottom: 30px;
+}
+.nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  height: 30px;
+  margin: 0;
+
+}
+.nav li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8em;
+  line-height: 30px;
+  height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid #888;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+ 
+.nav a:hover {
+  background-color: #005f5f;
+}
+ 
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+ 
+@media screen and (min-width: 600px) {
+  .nav li {
+    width: 180px;
+    border-bottom: none;
+    height: 30px;
+    line-height: 30px;
+    font-size: 0.8em;
+  }
+ 
+  /* Option 1 - Display Inline */
+  .nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+}
+.mostrar-empleo{
+  border: 1px solid #DDDDDD;
+  padding: 30px;
+  margin-bottom: 20px;
+  h1 {
+    margin-bottom: 0;
+    font-size: 4.0rem;
+  }
+  hr {
+    margin: 20px 0;
+  }
+ 
+  .compania {
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 10px;
+  }
+  .url {
+    display: inline-block;
+    margin-left: 5px;
+    margin-bottom: 10px;
+  }
+  .correo {
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .creado {
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+.logo{
+  max-width: 150px;
+}
+
+footer {
+  border-top: 1px solid #DDDDDD;
+  margin-top: 50px;
+  padding: 20px;
+  text-align: center;
+  a {
+    margin-left: 5px;
+  }
+}
