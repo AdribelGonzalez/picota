@@ -1,5 +1,5 @@
 export default {
-  create({Meteor, LocalState, FlowRouter}, email, password) {
+  nuevoUsuario({Meteor, LocalState, FlowRouter}, email, password) {
     if (!email) {
       return LocalState.set('CREATE_USER_ERROR', 'El Correo es Requerido.');
     }
@@ -10,8 +10,16 @@ export default {
 
     LocalState.set('CREATE_USER_ERROR', null);
 
-    Accounts.createUser({email, password});
-    FlowRouter.go('/');
+    Accounts.createUser({
+    email: email,
+    password: password
+}, function(error){
+    if(error){
+        console.log(error.reason); 
+    } else {
+        FlowRouter.go('/');
+    }
+});
   },
 
   login({Meteor, LocalState, FlowRouter}, email, password) {
@@ -24,11 +32,19 @@ export default {
     }
 
     LocalState.set('LOGIN_ERROR', null);
+    
 
-    Meteor.loginWithPassword(email, password);
-    console.log('Usuario dentro.');
-    console.log(Meteor.userId());
-    FlowRouter.go('/');
+    if (Meteor.isClient) {
+Meteor.loginWithPassword(email, password, function(error){
+    if(error){
+        console.log(error.reason);
+    } else {
+       FlowRouter.go('/');
+    }
+})
+    }
+    
+    
   },
 
   clearErrors({LocalState}) {

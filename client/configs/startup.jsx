@@ -3,7 +3,7 @@ Meteor.startup(() => {
   NProgress.configure({
     showSpinner: false
   });
-
+Roles.addUsersToRoles("SdwrZ5rixK9T877t3", ['admin']);
   sAlert.config({
     effect: 'scale',
     position: 'left-bottom',

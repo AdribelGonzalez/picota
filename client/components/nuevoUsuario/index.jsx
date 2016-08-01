@@ -6,11 +6,11 @@ class NuevoUsuario extends React.Component {
 		return (
 			<div>
 				<h1>Registrarse como Afiliado</h1>
-				{error ? <p style={{color: 'red'}}>{error}</p> : null}
+				{error ? <p style={{ color: 'red' }}>{error}</p> : null}
 				<form>
 					<input ref="email" type="email" placeholder="Email" />
 					<input ref="password" type="password" placeholder="Contrasena" />
-					<button onClick={this.createUser.bind(this)} type="submit">Sign Up</button>
+					<button onClick={this.createUser.bind(this) } type="submit">Sign Up</button>
 				</form>
 			</div>
 		)
@@ -18,12 +18,24 @@ class NuevoUsuario extends React.Component {
 
 	createUser(e) {
 		e.preventDefault();
-		const {create} = this.props;
+		const {nuevoUsuario} = this.props;
 		const {email, password} = this.refs;
-		create(email.value, password.value);
+		// nuevoUsuario(email.value, password.value);
+		
+		Accounts.createUser({
+			email: email.value,
+			password: password.value
+		}, function (error) {
+			if (error) {
+				console.log(error.reason);
+			} else {
+				FlowRouter.go('/');
+			}
+		});
 		email.value = '';
 		password.value = '';
 	}
+
 }
 
 export default NuevoUsuario;
