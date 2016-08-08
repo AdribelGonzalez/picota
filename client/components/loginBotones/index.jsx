@@ -2,18 +2,13 @@ import React from 'react';
 
 
 class Botones extends React.Component {
-  // temporary solution
-  getMeteorData() {
-    return {
-     users: Meteor.users.find({}).fetch(),
-     usuario: Meteor.user().username
-    }
-   }
+  
   notLoggedIn() {
     return <span><a className="button ver-empleos" href="/registrar">Registrarte   </a><a className="button ver-empleos" href="/login">Login</a></span>
   }
   isLoggedIn (){
-      if(Roles.userIsInRole(this.data.loggedIn, 'admin')){
+      if(Roles.userIsInRole(Meteor.userId(), ['admin'])){
+        console.log(true);
           return <span> <a className="button ver-empleos" href="/oculto">Config   </a>
            <a className="button ver-empleos" href="/logout">Logout</a></span>
       }
@@ -28,11 +23,11 @@ class Botones extends React.Component {
 
   render() {
     const {loggingIn} = this.props;
-
+    const hasUser = !!Meteor.user();
     return (
          
       <div className="require-login">
-        {loggingIn ? <p>hola</p> : this.getContent()}
+        {hasUser ? this.isLoggedIn() : this.getContent()}
       </div>
     );
   }

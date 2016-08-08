@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Configuracion from '../configuracion/index.jsx';
 
 class Oculto extends React.Component {
   // temporary solution
@@ -26,9 +26,5 @@ class Oculto extends React.Component {
     );
   }
 }
-
-Oculto.propTypes = {
-  children: React.PropTypes.element.isRequired
-};
 
 export default Oculto;

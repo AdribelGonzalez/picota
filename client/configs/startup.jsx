@@ -19,11 +19,12 @@ Roles.addUsersToRoles("SdwrZ5rixK9T877t3", ['admin']);
 //       Roles.createRole(role)
 //     })
 //   }
+// Session.set('expiracion', 2592000);
+// Session.set('limitePosts', 20);
 
+Session.set('cat', 'diseno');
 });
 
-Session.set('limitePosts', 20);
-Session.set('cat', 'diseno');
 
 setTitle = (title) => {
   let titulo = 'Bolsa de Empleos';

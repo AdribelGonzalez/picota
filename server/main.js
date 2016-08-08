@@ -1,3 +1,3 @@
-import addInitialData from './configs/initial_adds.js';
+// import addInitialData from './configs/initial_adds.js';
 
-addInitialData();
+// addInitialData();

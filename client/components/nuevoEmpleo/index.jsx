@@ -67,8 +67,8 @@ class NuevoEmpleo extends React.Component {
     const {crear} = this.props;
     const {posicionRef, descripcionRef, correoRef, companiaRef, urlRef, logoRef, categoriaRef, tipoRef, ubicacionRef, comoaplicarRef} = this.refs;
 
-
-    crear(posicionRef.value, descripcionRef.value, correoRef.value, companiaRef.value, urlRef.value, logoRef.value, categoriaRef.value, tipoRef.value, ubicacionRef.value, comoaplicarRef.value);
+    const expiracion = Session.get('expiracion');
+    crear(posicionRef.value, descripcionRef.value, correoRef.value, companiaRef.value, urlRef.value, logoRef.value, categoriaRef.value, tipoRef.value, ubicacionRef.value, comoaplicarRef.value, expiracion);
   }
 }
 

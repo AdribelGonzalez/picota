@@ -3,15 +3,14 @@ import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
 
 
-Meteor.publish('empleos.list', function (limitePosts) {
+Meteor.publish('empleos.list', function () {
   const selector = {};
   
   const options = {
     fields: {id: 1, posicion: 1, tipo: 1, categoria: 1, compania: 1, createdAt: 1},
     sort: {createdAt: -1},
-    limit: limitePosts
+    limit: 20
   };
-check(options, Object);
   return Empleos.find(selector, options);
 });
 
