@@ -10,7 +10,7 @@
     "testonly": "mocha $npm_package_options_mocha",
     "test": "npm run lint && npm run testonly",
     "watch-tests": "mocha $npm_package_options_mocha --watch",
-    "start":"--app"
+    "start":  "meteor"
   },
   "devDependencies": {
     "eslint": "1.10.x",
